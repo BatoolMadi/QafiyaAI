@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="logo/Qfavicon.png">
+    <title>قـافـيـةAI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="gen.css">
+</head>
+
+<body> 
+    <div class="tab-pane active" id="generator">
+
+        <div class="generator-header">
+            <a href="index.html">
+                <img src="logo/QafiyaAI.png" alt="قـافـيـةAI Logo">
+            </a>
+            <h2>مولد القصائد بالذكاء الاصطناعي</h2>
+        </div>
+
+        <div class="chat-container">
+
+            <div class="chat-box">
+
+                <!-- Output -->
+                <div class="output" id="output"></div>
+
+                <!-- Input Area -->
+                <div class="input-area">
+                    <textarea id="prompt" placeholder="اكتب فكرة القصيدة..."></textarea>
+
+                    <button id="sendBtn" class="send-btn">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M2 21l21-9L2 3v7l15 2-15 2z"/>
+                        </svg>
+                    </button>
+                 </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="loginPrompt" class="login-modal">
+        <div class="login-box">
+            <h3>احفظ قصائدك </h3>
+            <p>سجّل دخولك حتى نحتفظ بكل قصائدك ونرجع لها بأي وقت</p>
+
+            <div class="login-actions">
+                <a href="auth.html?mode=login" class="btn-primary">تسجيل الدخول</a>
+                <button id="laterBtn" class="btn-secondary">لاحقًا</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="module" src="scripts/generator.js"></script>
+</body>
+</html>

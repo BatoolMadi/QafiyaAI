@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="logo/Qfavicon.png">
+    <title>قـافـيـةAI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo/QafiyaAI.png" alt="قـافـيـةAI Logo">
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="poems.html">قصائد</a></li>
+            <li><a href="about.html">عن قـافـيـةAI</a></li>
+            <li><a href="auth.html?mode=login">تسجيل الدخول</a></li>
+            <li><a href="auth.html?mode=register" class="signup-btn">التسجيل</a></li>
+        </ul>
+    </nav>
+
+    <!-- Auth Box -->
+    <div class="auth-container">
+
+        <div class="auth-tabs">
+            <button id="loginTab" class="active-tab">تسجيل الدخول</button>
+            <button id="registerTab">إنشاء حساب</button>
+        </div>
+        
+        <!-- Login Form -->
+        <form id="loginForm" class="auth-form active-form">
+            
+            <div class="input-group">
+                <input type="email" id="loginEmail" placeholder="البريد الإلكتروني">
+                <small class="error"></small>
+            </div>
+
+            <div class="input-group password-field">
+                <input type="password" id="loginPassword" placeholder="كلمة المرور">
+                
+                <i class="fa-solid fa-eye toggle-password" id="toggleLoginPassword"></i>
+
+                <small class="error"></small>
+            </div>
+
+            <button type="submit">تسجيل الدخول</button>
+
+            <div class="forgot-password">
+
+                <label class="remember-me custom-checkbox">
+                    <input type="checkbox" id="rememberMe">
+                    <span class="checkmark"></span>       
+                    تذكرني
+                </label>
+
+                <a href="#">نسيت كلمة المرور؟</a>
+
+            </div>
+
+            <div class="switch-auth">
+                <a href="#">ليس لديك حساب؟ قم بالتسجيل</a>
+            </div>
+
+        </form>
+
+        <!-- Register Form -->
+        <form id="registerForm" class="auth-form">
+            
+            <div class="input-group">
+                <input type="text" id="name" placeholder="الاسم الكامل">
+                <small class="error"></small>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="registerEmail" placeholder="البريد الإلكتروني">
+                <small class="error"></small>
+            </div>
+
+            <div class="input-group password-field">
+                <input type="password" id="registerPassword" placeholder="كلمة المرور">
+                
+                <i class="fa-solid fa-eye toggle-password" id="toggleRegisterPassword"></i>
+
+                <small class="error"></small>
+            </div>
+
+            <div class="input-group password-field">
+                <input type="password" id="confirmPassword" placeholder="تأكيد كلمة المرور">
+                
+                <i class="fa-solid fa-eye toggle-password" id="toggleConfirmPassword"></i>
+
+                <small class="error"></small>
+            </div>
+
+            <button type="submit">إنشاء حساب</button>
+        </form>
+
+    </div>
+
+    <div id="successMessage" class="success-message"></div>
+    
+</div>
+
+
+<script type="module" src="scripts/auth.js"></script>
+
+</body>
+</html>
